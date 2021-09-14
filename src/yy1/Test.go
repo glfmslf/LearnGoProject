@@ -12,8 +12,6 @@ const (
 
 var a, b, c = 11, false, "test11111"
 
-const yy = "yy"
-
 func main() {
 	//fmt.Println(a,b,c,yy)
 	//fmt.Println(unsafe.Sizeof(c))
