@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
@@ -43,12 +44,11 @@ func main() {
 	//fmt.Printf("a的值%d,地址%d\n",a,&a)
 	//fmt.Printf("ptr的值=%d，地址%d\n", *ptr,ptr)
 	//fmt.Printf("pptr的值%d,地址%d\n",**pptr,*pptr)
-	//p := Person{"yy", 1}
+	p := Person{"yy", 1}
 	//fmt.Println(&p)
-	//if result,err:=json.Marshal(&p);err==nil{
-	//	fmt.Println(string(result))
-	//
-	//}
+	if result, err := json.Marshal(p); err == nil {
+		fmt.Println(string(result))
+	}
 
 	//var n [5]int
 	//for i := 0; i < 5; i++ {
@@ -56,13 +56,13 @@ func main() {
 	//}
 	//fmt.Println(n)
 	//n := make([]int)
-	var n []int
-	var name = 1
-	fmt.Println(name)
-	for i := 0; i < 10; i++ {
-		n[i] = i
-	}
-	fmt.Println(n)
+	//var n []int
+	//var name = 1
+	//fmt.Println(name)
+	//for i := 0; i < 10; i++ {
+	//	n[i] = i
+	//}
+	//fmt.Println(n)
 }
 
 func max(a, b int) int {

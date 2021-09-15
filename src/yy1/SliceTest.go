@@ -39,7 +39,7 @@ func main() {
 	//M()
 	//N()
 	//a := 0xFF
-	b := 1.0234
+	//b := 1.0234
 	//fmt.Printf("result %x\n",a)
 	//fmt.Printf("result %X\n",a)
 	//fmt.Printf("result %d\n",a)
@@ -48,10 +48,19 @@ func main() {
 	//fmt.Printf("result %e\n",b)
 	//fmt.Printf("result %02d\n",a)
 	//fmt.Printf("result %1.2g\n",a)
-	fmt.Printf("result %2.2f\n", b)
+	//fmt.Printf("result %2.2f\n",b)
+	//
+	//var c1 = 5 + 10i
+	//fmt.Printf("result = %v\n",c1)
+	//s := "studenttten"
+	//str := "en"
+	//fmt.Println(strings.Index(s,str))
+	//fmt.Println(strings.Replace(s,"ttt","S",2))
+	//fmt.Println(strconv.Itoa(1))
+	//var i, err = strconv.Atoi("111")
+	//fmt.Printf("result = %d   %s",i,err)
 
-	var c1 = 5 + 10i
-	fmt.Printf("result = %v\n", c1)
+	fmt.Printf("result = %v", new(person))
 }
 
 var t = "G"
@@ -65,5 +74,9 @@ func M() {
 
 func printSlice(x []int) {
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(x), cap(x), x)
+}
 
+type person struct {
+	name string
+	age  int
 }
