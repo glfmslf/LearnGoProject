@@ -1,8 +1,8 @@
 package yy
 
-var a = "G"
+var A = "G"
 
-func N() { print(a) }
+func N() { print(A) }
 
 func M() {
 	a := "O"

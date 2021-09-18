@@ -140,19 +140,63 @@ func main() {
 	//var a  = [5] int{1,2,3,4, 5}
 	//b := a[4:5]
 	//fmt.Println(len(b))
-	s := "abcdef"
-	r := []byte(s)
-	for _, i := range r {
-		fmt.Printf("result = %b\n", i)
+	//s := "abcdef"
+	//r := []byte(s)
+	//for _, i := range r {
+	//	fmt.Printf("result = %b\n", i)
+	//
+	//}
+	//fmt.Println(r)
 
-	}
-	fmt.Println(r)
+	//目标字符串
+	//searchIn := "John: 2578.34 William: 4567.23 Steve: 5632.18"
+	//pat := "[0-9]+.[0-9]+" //正则
+	//
+	//f := func(s string) string {
+	//	v, _ := strconv.ParseFloat(s, 32)
+	//	return strconv.FormatFloat(v*2, 'f', 2, 32)
+	//}
+	//
+	//if ok, _ := regexp.Match(pat, []byte(searchIn)); ok {
+	//	fmt.Println("Match Found!")
+	//}
+	//
+	//re, _ := regexp.Compile(pat)
+	////将匹配到的部分替换为"##.#"
+	//str := re.ReplaceAllString(searchIn, "##.#")
+	//fmt.Println(str)
+	////参数为函数时
+	//str2 := re.ReplaceAllStringFunc(searchIn, f)
+	//fmt.Println(str2)
+	//fmt.Println(yy.A)
+
+	// OK
+	y := new(Bar)
+	(y).thingOne = "hello"
+	y.thingTwo = 1
+	fmt.Println(y)
+
+	// NOT OK
+	//z := make(Bar{thingOne:"222"}) // 编译错误：cannot make type Bar
+	//(*z).thingOne = "hello"
+	//(*z).thingTwo = 1
+
+	// OK
+	x := make(Foo)
+	x["x"] = "goodbye"
+	x["y"] = "world"
+
+	//// NOT OK
+	//u := new(Foo)
+	//(*u)["x"] = "goodbye" // 运行时错误!! panic: assignment to entry in nil map
+	//(*u)["y"] = "world"
 }
 
 const LIM = 41
 
 var fibs [LIM]uint64
 
+//fibonacci
 func fibonacci(n int) (res uint64) {
 	// memoization: check if fibonacci(n) is already known in array:
 	if fibs[n] != 0 {
@@ -166,6 +210,12 @@ func fibonacci(n int) (res uint64) {
 	}
 	fibs[n] = res
 	return
+}
+
+type Foo map[string]string
+type Bar struct {
+	thingOne string
+	thingTwo int
 }
 
 func f() {
