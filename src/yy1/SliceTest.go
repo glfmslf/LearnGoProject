@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -60,7 +61,8 @@ func main() {
 	//var i, err = strconv.Atoi("111")
 	//fmt.Printf("result = %d   %s",i,err)
 
-	fmt.Printf("result = %v", new(person))
+	//fmt.Printf("result = %v", new(person))
+	fmt.Printf(time.Now().String()[0:3])
 }
 
 var t = "G"
